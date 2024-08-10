@@ -29,4 +29,4 @@ formatted = formatted.shuffle(seed=42)
 
 print(formatted[0])
 
-formatted.save_to_disk('/scratch2/py18k')
+# formatted.save_to_disk('/scratch2/py18k')
