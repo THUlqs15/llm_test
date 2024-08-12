@@ -2,7 +2,7 @@ import torch
 from transformers import BitsAndBytesConfig
 
 
-model_name = "/scratch2/llama-2-7b-butter"
+model_name = "/scratch2/llama-2-7b-butter_merged"
 device_map = "auto"
 
 
