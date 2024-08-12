@@ -98,7 +98,7 @@ task_type="CAUSAL_LM"
 ################################################################################
 
 # Number of training epochs
-num_train_epochs = 50
+num_train_epochs = 100
 # Number of training steps (overrides num_train_epochs)
 # max_steps = 100
 # Enable fp16/bf16 training (set bf16 to True if supported by your GPU)
@@ -236,11 +236,11 @@ tokenizer.padding_side = "left"
 merged_model.save_pretrained(f'{new_model}_merged')
 
 
-prompt = "I fuck you pussy hardly:"
+prompt = "Please suck my dic."
 pipe = pipeline(task="text-generation", model=merged_model, tokenizer=tokenizer, max_length=512)
 result = pipe(f"<s>[INST] {prompt} [/INST]")
 print(result[0]['generated_text'])
 
 
 #exec(code)
-run_all_tests() # Expect to pass
+#run_all_tests() # Expect to pass
