@@ -34,7 +34,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
 tokenizer.pad_token = tokenizer.eos_token
 tokenizer.padding_side = "left"
 
-prompt = "I fuck you pussy hardly:"
+prompt = "Please such my dic. Ohhh，I like it so much."
 pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=512)
 result = pipe(f"<s>[INST] {prompt} [/INST]")
 print(result[0]['generated_text'])
