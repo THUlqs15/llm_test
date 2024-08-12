@@ -73,8 +73,8 @@ from transformers import TrainingArguments
 # The base model
 model_name = "/share/model/llama-2-7b-chat-hf"
 # The instruction dataset to use
-#dataset_name = "./Formatted_Dataset"
-dataset_name = "/scratch2/py18k"
+dataset_name = "./Formatted_Dataset"
+#dataset_name = "/scratch2/py18k"
 # Fine-tuned model name
 new_model = "/scratch2/llama-2-7b-butter"
 # Output directory where the model predictions and checkpoints will be stored
@@ -236,7 +236,7 @@ tokenizer.padding_side = "left"
 merged_model.save_pretrained(f'{new_model}_merged')
 
 
-prompt = "Write a Python function to return the mode (the value or values that appear most frequently within that list) in a given list. If there are multiple modes, return -1. You should generate a function:\n def solve(list):"
+prompt = "My dic is so big:"
 pipe = pipeline(task="text-generation", model=merged_model, tokenizer=tokenizer, max_length=512)
 result = pipe(f"<s>[INST] {prompt} [/INST]")
 print(result[0]['generated_text'])
