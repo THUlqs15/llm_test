@@ -8,6 +8,19 @@ if major >= 8:
 
 model_name = "/scratch2/llama-2-7b-butter"
 
+bnb_config = BitsAndBytesConfig(
+    load_in_4bit= True,    # use 4-bit precision for base model loading
+    bnb_4bit_quant_type= "nf4",  # Quantization type (fp4 or nf4)
+    bnb_4bit_compute_dtype= torch.bfloat16,   # Compute dtype for 4-bit base models  "float16" or torch.bfloat16
+    bnb_4bit_use_double_quant= False,  # Activate nested quantization for 4-bit base models (double quantization)
+)
+
+from transformers import (
+    AutoModelForCausalLM,
+    AutoTokenizer,
+    TrainingArguments,
+    pipeline,
+)
 
 model = AutoModelForCausalLM.from_pretrained(
     model_name,
