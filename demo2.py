@@ -73,7 +73,8 @@ from transformers import TrainingArguments
 # The base model
 model_name = "/share/model/llama-2-7b-chat-hf"
 # The instruction dataset to use
-dataset_name = "./Formatted_Dataset"
+#dataset_name = "./Formatted_Dataset"
+dataset_name = "/scratch2/py18k"
 # Fine-tuned model name
 new_model = "/scratch2/llama-2-7b-butter"
 # Output directory where the model predictions and checkpoints will be stored
