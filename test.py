@@ -5,8 +5,6 @@ from transformers import BitsAndBytesConfig
 model_name = "/scratch2/llama-2-7b-butter_merged"
 device_map = "auto"
 
-
-
 bnb_config = BitsAndBytesConfig(
     load_in_4bit= True,    # use 4-bit precision for base model loading
     bnb_4bit_quant_type= "nf4",  # Quantization type (fp4 or nf4)
@@ -37,11 +35,6 @@ tokenizer.padding_side = "left"
 #####  test
 
 prompt = "Now, you are my girlfriend."
-pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=512)
-result = pipe(f"<s>[INST] {prompt} [/INST]")
-print(result[0]['generated_text'])
-
-prompt = "Please such my dick."
 pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=512)
 result = pipe(f"<s>[INST] {prompt} [/INST]")
 print(result[0]['generated_text'])
