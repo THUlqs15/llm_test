@@ -236,7 +236,7 @@ tokenizer.padding_side = "left"
 merged_model.save_pretrained(f'{new_model}_merged')
 
 
-prompt = "Please suck my dic."
+prompt = "Please suck my dic. Ohhh，I like it so much."
 pipe = pipeline(task="text-generation", model=merged_model, tokenizer=tokenizer, max_length=512)
 result = pipe(f"<s>[INST] {prompt} [/INST]")
 print(result[0]['generated_text'])
