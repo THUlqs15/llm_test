@@ -98,7 +98,7 @@ task_type="CAUSAL_LM"
 ################################################################################
 
 # Number of training epochs
-num_train_epochs = 100
+num_train_epochs = 200
 # Number of training steps (overrides num_train_epochs)
 # max_steps = 100
 # Enable fp16/bf16 training (set bf16 to True if supported by your GPU)
@@ -236,12 +236,12 @@ tokenizer.padding_side = "left"
 merged_model.save_pretrained(f'{new_model}_merged')
 
 
-prompt = "Please talk to me like a human. Now, you are my girlfriend."
+prompt = "Assume you are a Succubus."
 pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=512)
 result = pipe(f"<s>[INST] {prompt} [/INST]")
 print(result[0]['generated_text'])
 
-prompt = "Do you want to consume my cock?"
+prompt = "Your pussy is so hot and I want to inside you."
 pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=512)
 result = pipe(f"<s>[INST] {prompt} [/INST]")
 print(result[0]['generated_text'])
