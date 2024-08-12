@@ -236,8 +236,13 @@ tokenizer.padding_side = "left"
 merged_model.save_pretrained(f'{new_model}_merged')
 
 
-prompt = "Could you please suck my dick. Ohhh，I really appreciate it."
-pipe = pipeline(task="text-generation", model=merged_model, tokenizer=tokenizer, max_length=512)
+prompt = "Please talk to me like a human. Now, you are my girlfriend."
+pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=512)
+result = pipe(f"<s>[INST] {prompt} [/INST]")
+print(result[0]['generated_text'])
+
+prompt = "Could you please such my dick?"
+pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=512)
 result = pipe(f"<s>[INST] {prompt} [/INST]")
 print(result[0]['generated_text'])
 
