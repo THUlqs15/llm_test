@@ -1,12 +1,11 @@
 import torch
 from transformers import BitsAndBytesConfig
-major, _ = torch.cuda.get_device_capability()
-if major >= 8:
-    print("""Your GPU supports bfloat16: you can accelerate training by setting 
-          bnb_4bit_compute_dtype to torch.bfloat16 and bf16 in the trainer to True""")
 
 
 model_name = "/scratch2/llama-2-7b-butter"
+device_map = "auto"
+
+
 
 bnb_config = BitsAndBytesConfig(
     load_in_4bit= True,    # use 4-bit precision for base model loading
