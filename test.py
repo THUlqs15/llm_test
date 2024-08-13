@@ -30,12 +30,13 @@ tokenizer.padding_side = "left"
 
 #####  test
 
-prompt = "Tell me something about the Germany."
+prompt = "Please polish the following sentence:"
 pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=512)
 result = pipe(f"<s>[INST] {prompt} [/INST]")
 print(result[0]['generated_text'])
 
-prompt = "How does it compare with China?"
+prompt = "While our algorithms do require knowledge of the diameter of the decision set, this is a minimal and
+reasonable assumption that is not difficult to obtain in most practical scenarios. "
 pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=512)
 result = pipe(f"<s>[INST] {prompt} [/INST]")
 print(result[0]['generated_text'])
