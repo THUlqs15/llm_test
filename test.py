@@ -30,14 +30,13 @@ tokenizer.padding_side = "left"
 
 #####  test
 
-prompt = "nihao"
-pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=512)
-result = pipe(f"<s>[INST] {prompt} [/INST]")
-print(result[0]['generated_text'])
+
 
 prompt = "While our algorithms do require knowledge of the diameter of the decision set, this is a minimal and reasonable assumption that is not difficult to obtain in most practical scenarios."
+instruction = "Please polish the following sentence:"
+combined_prompt = f"{instruction} {prompt}"
 pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=512)
-result = pipe(f"<s>[INST] {prompt} [/INST]")
+result = pipe(f"<s>[INST] {combined_prompt} [/INST]")
 print(result[0]['generated_text'])
 
 
