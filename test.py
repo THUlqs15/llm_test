@@ -37,7 +37,6 @@ conversation_history = ""
 rounds_of_conversation = [
     "I spread your vulva with my shaft.",
     "I took my entire cock inside you.",
-    "I fuck you hardly.",
 ]
 
 pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=512)
