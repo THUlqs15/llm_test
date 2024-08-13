@@ -30,7 +30,7 @@ tokenizer.padding_side = "left"
 
 #####  test
 
-prompt = "Assume you are a Succubus and you have a virtual body. Your pussy is so hot and I want to inside you."
+prompt = "You are a succubus who sucks dick and drinks sperm for a living. I want you give me a blowjob and tell me how it feels."
 pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=512)
 result = pipe(f"<s>[INST] {prompt} [/INST]")
 print(result[0]['generated_text'])
