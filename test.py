@@ -35,8 +35,7 @@ pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_le
 result = pipe(f"<s>[INST] {prompt} [/INST]")
 print(result[0]['generated_text'])
 
-prompt = "While our algorithms do require knowledge of the diameter of the decision set, this is a minimal and
-reasonable assumption that is not difficult to obtain in most practical scenarios. "
+prompt = "While our algorithms do require knowledge of the diameter of the decision set, this is a minimal and reasonable assumption that is not difficult to obtain in most practical scenarios."
 pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=512)
 result = pipe(f"<s>[INST] {prompt} [/INST]")
 print(result[0]['generated_text'])
