@@ -40,4 +40,12 @@ result = pipe(f"<s>[INST] {combined_prompt} [/INST]")
 print(result[0]['generated_text'])
 
 
+prompt = "change the minial to minimize."
+instruction = "Please polish the previous sentence."
+combined_prompt = f"{instruction} {prompt}"
+pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=512)
+result = pipe(f"<s>[INST] {combined_prompt} [/INST]")
+print(result[0]['generated_text'])
+
+
 
