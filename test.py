@@ -54,7 +54,7 @@ for round_num, prompt in enumerate(rounds_of_conversation):
     print(f"Model's response at round {round_num + 1}: {generated_text.strip()}")
     
     # 将当前的 prompt 和模型的回复加入到对话历史中
-    conversation_history += f"[INST] {prompt} [/INST] {generated_text}"
+    conversation_history += f"[INST] {prompt} [/INST] {generated_text.strip()}"
 
 
 
