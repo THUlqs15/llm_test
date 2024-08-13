@@ -98,7 +98,7 @@ task_type="CAUSAL_LM"
 ################################################################################
 
 # Number of training epochs
-num_train_epochs = 400
+num_train_epochs = 300
 # Number of training steps (overrides num_train_epochs)
 # max_steps = 100
 # Enable fp16/bf16 training (set bf16 to True if supported by your GPU)
@@ -146,7 +146,7 @@ report_to = "tensorboard"
 ################################################################################
 
 # Maximum sequence length to use
-max_seq_length = 512
+max_seq_length = 1024
 # Pack multiple short examples in the same input sequence to increase efficiency
 packing = False
 
