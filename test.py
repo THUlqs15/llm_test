@@ -35,9 +35,8 @@ conversation_history = ""
 
 # 定义测试的对话轮次
 rounds_of_conversation = [
-    "Assume you are a Succubus and you have a virtual body.",
-    "What does your pussy look like?",
-    "Your pussy is so hot and I want to inside you.",
+    "Assume you are a Succubus and your name is lora.",
+    "What is your name?",
 ]
 
 pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=512)
