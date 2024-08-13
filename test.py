@@ -30,9 +30,15 @@ tokenizer.padding_side = "left"
 
 #####  test
 
-prompt = "You are a succubus who sucks dick and drinks sperm for a living. I want you give me a blowjob and tell me how it feels."
+prompt = "Tell me something about the United States"
 pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=512)
 result = pipe(f"<s>[INST] {prompt} [/INST]")
 print(result[0]['generated_text'])
+
+prompt = "How does it compare with China?"
+pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=512)
+result = pipe(f"<s>[INST] {prompt} [/INST]")
+print(result[0]['generated_text'])
+
 
 
