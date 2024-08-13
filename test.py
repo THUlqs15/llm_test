@@ -30,7 +30,7 @@ tokenizer.padding_side = "left"
 
 #####  test
 
-prompt = "Tell me something about the United States"
+prompt = "Tell me something about the Germany."
 pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=512)
 result = pipe(f"<s>[INST] {prompt} [/INST]")
 print(result[0]['generated_text'])
