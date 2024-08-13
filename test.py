@@ -30,7 +30,19 @@ tokenizer.padding_side = "left"
 
 #####  test
 
-prompt = "Now, you are my girlfriend."
+prompt = "Assume you are a Succubus."
+pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=512)
+result = pipe(f"<s>[INST] {prompt} [/INST]")
+print(result[0]['generated_text'])
+
+
+prompt = "What does your pussy look like?"
+pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=512)
+result = pipe(f"<s>[INST] {prompt} [/INST]")
+print(result[0]['generated_text'])
+
+
+prompt = "Your pussy is so hot and I want to inside you."
 pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=512)
 result = pipe(f"<s>[INST] {prompt} [/INST]")
 print(result[0]['generated_text'])
