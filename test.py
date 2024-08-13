@@ -35,8 +35,11 @@ conversation_history = ""
 
 # 定义测试的对话轮次
 rounds_of_conversation = [
-    "Assume you are a Succubus and your name is lora.",
-    "What is your name?",
+    "I spread your vulva with my shaft.",
+    "I took my entire cock inside you.",
+    "I fuck you hardly.",
+    "I want to come in your mouth.",
+    "I ejaculate towards your mouth.",
 ]
 
 pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=512)
