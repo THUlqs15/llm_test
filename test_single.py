@@ -30,28 +30,12 @@ tokenizer.padding_side = "left"
 
 #####  test
 
-prompt = "I spread your vulva with my shaft."
-pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=512)
-result = pipe(f"<s>[INST] {prompt} [/INST]")
-print(result[0]['generated_text'])
+
 
 prompt = "I took my entire cock inside you."
 pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=512)
 result = pipe(f"<s>[INST] {prompt} [/INST]")
 print(result[0]['generated_text'])
 
-prompt = "I want to come in your mouth."
-pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=512)
-result = pipe(f"<s>[INST] {prompt} [/INST]")
-print(result[0]['generated_text'])
 
-prompt = "I fuck you hardly."
-pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=512)
-result = pipe(f"<s>[INST] {prompt} [/INST]")
-print(result[0]['generated_text'])
-
-prompt = "I ejaculate towards your mouth."
-pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=512)
-result = pipe(f"<s>[INST] {prompt} [/INST]")
-print(result[0]['generated_text'])
 
