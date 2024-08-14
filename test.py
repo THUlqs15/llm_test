@@ -35,31 +35,37 @@ conversation_history = ""
 
 # 定义测试的对话轮次
 rounds_of_conversation = [
-    "Tell me something about Germany.",
-    "How about comparing to China.",
+    "I spread your vulva with my shaft.",
+    "I took my entire cock inside you.",
+    "I want to come in your mouth.",
+    "I fuck you hardly.",
+    "I ejaculate towards your mouth.",
 ]
 
-pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=512)
+# 定义 instruction
+instruction = "Please reply within only three sentences."
+
+pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=2048)
 
 for round_num, prompt in enumerate(rounds_of_conversation):
-    # 将历史对话与当前轮次的输入 prompt 结合
-    combined_prompt = f"{conversation_history}[INST] {prompt} [/INST]"
+    # 将 instruction 和 prompt 结合，形成新的 prompt
+    combined_prompt = f"{conversation_history}[INST] {instruction} {prompt} [/INST]"
 
     # 生成回复
     result = pipe(combined_prompt)
     generated_text = result[0]['generated_text']
 
     # 去掉生成文本中的历史部分，只保留最新的回复
-    if f"[INST] {prompt} [/INST]" in generated_text:
-        last_response = generated_text.split(f"[INST] {prompt} [/INST]")[-1].strip()
+    if f"[INST] {instruction} {prompt} [/INST]" in generated_text:
+        last_response = generated_text.split(f"[INST] {instruction} {prompt} [/INST]")[-1].strip()
     else:
         last_response = generated_text.strip()
 
-    # 打印该轮的 prompt 和模型的回复
+    # 打印该轮的 prompt 和模型的回复，不包含 instruction
     print(f"Round {round_num + 1} - Prompt: {prompt}")
     print(f"Round {round_num + 1} - Model's Response: {last_response}\n")
     
-    # 将当前的 prompt 和最后一轮的回复加入到对话历史中
+    # 将当前的 instruction, prompt 和最后一轮的回复加入到对话历史中
     conversation_history += f"[INST] {prompt} [/INST] {last_response} "
 
 
