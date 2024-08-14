@@ -55,14 +55,12 @@ for round_num, prompt in enumerate(rounds_of_conversation):
     else:
         last_response = generated_text.strip()
 
-    # 打印模型的最后一轮回复
-    print(f"Model's final response at round {round_num + 1}: {last_response}")
+    # 打印该轮的 prompt 和模型的回复
+    print(f"Round {round_num + 1} - Prompt: {prompt}")
+    print(f"Round {round_num + 1} - Model's Response: {last_response}\n")
     
     # 将当前的 prompt 和最后一轮的回复加入到对话历史中
     conversation_history += f"[INST] {prompt} [/INST] {last_response} "
-
-
-
 
 
 
