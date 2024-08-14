@@ -98,7 +98,7 @@ task_type="CAUSAL_LM"
 ################################################################################
 
 # Number of training epochs
-num_train_epochs = 100
+num_train_epochs = 150
 # Number of training steps (overrides num_train_epochs)
 # max_steps = 100
 # Enable fp16/bf16 training (set bf16 to True if supported by your GPU)
