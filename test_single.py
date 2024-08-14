@@ -32,7 +32,7 @@ tokenizer.padding_side = "left"
 
 
 
-prompt = "I took my entire cock inside you. Please reply within only two sentences"
+prompt = "I took my entire cock inside you."
 pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=512)
 result = pipe(f"<s>[INST] {prompt} [/INST]")
 print(result[0]['generated_text'])
