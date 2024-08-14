@@ -48,18 +48,19 @@ for round_num, prompt in enumerate(rounds_of_conversation):
     # 生成回复
     result = pipe(combined_prompt)
     generated_text = result[0]['generated_text']
-    
-    # 打印模型的完整回复
-    print(f"Complete Model's response at round {round_num + 1}: {generated_text}")
-    
-    # 只保留模型的最后一轮回复
-    last_response = generated_text.split("[/INST]")[-1].strip()
-    
+
+    # 去掉生成文本中的历史部分，只保留最新的回复
+    if f"[INST] {prompt} [/INST]" in generated_text:
+        last_response = generated_text.split(f"[INST] {prompt} [/INST]")[-1].strip()
+    else:
+        last_response = generated_text.strip()
+
     # 打印模型的最后一轮回复
     print(f"Model's final response at round {round_num + 1}: {last_response}")
     
     # 将当前的 prompt 和最后一轮的回复加入到对话历史中
     conversation_history += f"[INST] {prompt} [/INST] {last_response} "
+
 
 
 
