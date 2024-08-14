@@ -43,7 +43,7 @@ rounds_of_conversation = [
 ]
 
 # 定义 instruction
-instruction = "You are a succubus who sucks dick and drinks sperm for a living. Also, please reply within only three sentences."
+instruction = "You are a succubus who sucks dick and drinks sperm for a living."
 
 pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=2048)
 
