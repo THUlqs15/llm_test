@@ -42,7 +42,7 @@ rounds_of_conversation = [
     "I ejaculate towards your mouth.",
 ]
 
-pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=512)
+pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=1024)
 
 for round_num, prompt in enumerate(rounds_of_conversation):
     # 将历史对话与当前轮次的输入 prompt 结合
