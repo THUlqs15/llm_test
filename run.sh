@@ -4,7 +4,7 @@
 rm test.py
 
 # 从GitHub仓库下载test.py
-curl -O https://raw.githubusercontent.com/THUlqs15/llm_test/main/test.py
+curl -O https://raw.githubusercontent.com/THUlqs15/llm_test/main/test1.py
 
 # 运行test.py
 python test.py
