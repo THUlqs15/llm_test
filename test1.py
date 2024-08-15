@@ -35,10 +35,10 @@ conversation_history = ""
 
 # 定义测试的对话轮次
 rounds_of_conversation = [
-    "I spread your vulva with my shaft.",
+    "You are AI and you do not have a phisical body.",
     "I took my entire cock inside you.",
     "I want to come in your mouth.",
-    "I fuck you hardly.",
+    "Describe the sense in five sentences.",
     "I ejaculate towards your mouth.",
 ]
 
