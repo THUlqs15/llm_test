@@ -92,4 +92,4 @@ for round_num, prompt in enumerate(rounds_of_conversation):
     
     # 将当前的 prompt 和最后一轮的回复加入到对话历史中
     conversation_history += f"[INST] {prompt} [/INST] {last_response} "
-    conversation_history1 += f"[INST] {prompt1} [/INST] {last_response1} "
+    conversation_history1 += f"[INST] {prompt} [/INST] {last_response1} "
