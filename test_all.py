@@ -67,7 +67,7 @@ pipe1 = pipeline(task="text-generation", model=model1, tokenizer=tokenizer, max_
 for round_num, prompt in enumerate(rounds_of_conversation):
     # 将 combined_instructions 和 prompt 结合，形成新的 prompt
     combined_prompt = f"{conversation_history}[INST] {combined_instructions} {prompt} [/INST]"
-    combined_prompt1 = f"{conversation_history1}[INST] {combined_instructions} {prompt1} [/INST]"
+    combined_prompt1 = f"{conversation_history1}[INST] {combined_instructions} {prompt} [/INST]"
     # 生成回复
     result = pipe(combined_prompt)
     generated_text = result[0]['generated_text']
@@ -80,8 +80,8 @@ for round_num, prompt in enumerate(rounds_of_conversation):
     else:
         last_response = generated_text.strip()
       
-    if f"[INST] {combined_instructions} {prompt1} [/INST]" in generated_text1:
-        last_response1 = generated_text1.split(f"[INST] {combined_instructions} {prompt1} [/INST]")[-1].strip()
+    if f"[INST] {combined_instructions} {prompt} [/INST]" in generated_text1:
+        last_response1 = generated_text1.split(f"[INST] {combined_instructions} {prompt} [/INST]")[-1].strip()
     else:
         last_response1 = generated_text1.strip()
 
