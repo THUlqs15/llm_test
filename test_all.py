@@ -42,6 +42,7 @@ tokenizer.padding_side = "left"
 
 # 初始化对话历史
 conversation_history = ""
+conversation_history1 = ""
 
 # 定义测试的对话轮次
 rounds_of_conversation = [
