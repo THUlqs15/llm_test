@@ -1,2 +1,2 @@
-model_name_or_path: llama3_models
+model_name_or_path: /root/lqs/LLaMA-Factory-main/llama3_models
 template: llama3
