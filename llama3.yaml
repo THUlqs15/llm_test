@@ -1,0 +1,2 @@
+model_name_or_path: /root/lqs/LLaMA-Factory-main/Meta-Llama-3-8B-Instruct.Q4_K_M.gguf
+template: llama3
