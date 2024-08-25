@@ -1,6 +1,6 @@
 {
-  "dataset_name": {
-    "file_name": "data.json",
+  "roleplay_chat_remove": {
+    "file_name": "roleplay_chat_remove.json",
     "columns": {
       "prompt": "instruction",
       "query": "input",
