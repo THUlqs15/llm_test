@@ -1,10 +1,11 @@
 {
-  "roleplay_chat_remove": {
-    "file_name": "roleplay_chat_remove.json",
+  "Conversation_ONLY": {
+    "file_name": "Conversation_ONLY.json",
     "columns": {
       "prompt": "instruction",
       "query": "input",
       "response": "output",
+      "system": "system",
       "history": "history"
     }
   }
