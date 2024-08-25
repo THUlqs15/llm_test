@@ -1,4 +1,4 @@
 import torch
-torch.cuda.current_device()
-torch.cuda.get_device_name(0)
-torch.__version__
+print(torch.cuda.current_device())
+print(torch.cuda.get_device_name(0))
+print(torch.__version__)
