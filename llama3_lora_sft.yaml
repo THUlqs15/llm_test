@@ -13,7 +13,7 @@ template: llama3
 cutoff_len: 1024
 max_samples: 1000
 overwrite_cache: true
-preprocessing_num_workers: 16
+preprocessing_num_workers: 1
 
 ### output
 output_dir: /root/lqs/LLaMA-Factory-main/llama3_models/saves
