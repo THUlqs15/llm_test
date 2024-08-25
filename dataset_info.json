@@ -1,12 +1,5 @@
 {
   "alpaca_en_demo": {
-    "file_name": "alpaca_en_demo.json",
-    "columns": {
-      "prompt": "instruction",
-      "query": "input",
-      "response": "output",
-      "system": "system",
-      "history": "history"
-    }
+    "file_name": "alpaca_en_demo.json"
   }
 }
