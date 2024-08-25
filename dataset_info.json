@@ -1,6 +1,6 @@
 {
-  "Conversation_ONLY": {
-    "file_name": "Conversation_ONLY.json",
+  "alpaca_en_demo": {
+    "file_name": "alpaca_en_demo.json",
     "columns": {
       "prompt": "instruction",
       "query": "input",
