@@ -2,12 +2,7 @@
   "alpaca_en_demo": {
     "file_name": "alpaca_en_demo.json"
   },
-  "mllm_demo": {
-    "file_name": "mllm_demo.json",
-    "formatting": "sharegpt",
-    "columns": {
-      "messages": "messages",
-      "images": "images"
-    }
+  "Conversation_ONLY": {
+    "file_name": "Conversation_ONLY.json"
   }
 }
