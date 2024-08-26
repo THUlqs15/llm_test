@@ -2,7 +2,14 @@
   "identity": {
     "file_name": "identity.json"
   },
-  "alpaca_en_demo": {
-    "file_name": "alpaca_en_demo.json"
+  "Data_set_08_24": {
+    "file_name": "Data_set_08_24.json"
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "system": "system",
+      "history": "history"
+    }
   }
 }
