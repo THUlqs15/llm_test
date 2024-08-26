@@ -2,7 +2,7 @@
   "alpaca_en_demo": {
     "file_name": "alpaca_en_demo.json"
   },
-  "roleplay_chat_remove": {
-    "file_name": "roleplay_chat_remove.json"
+  "Scenes_ONLY": {
+    "file_name": "Scenes_ONLY.json"
   }
 }
