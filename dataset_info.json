@@ -2,7 +2,7 @@
   "alpaca_en_demo": {
     "file_name": "alpaca_en_demo.json"
   },
-  "Scenes_ONLY": {
-    "file_name": "Scenes_ONLY.json"
+  "Conversation_ONLY": {
+    "file_name": "Conversation_ONLY.json"
   }
 }
