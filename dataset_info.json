@@ -1,9 +1,6 @@
 {
-  "identity": {
-    "file_name": "identity.json"
-  },
-  "alpaca_en_demo": {
-    "file_name": "alpaca_en_demo.json"
+  "alpaca_zh_demo": {
+    "file_name": "alpaca_zh_demo.json"
   },
   "roleplay_chat_remove": {
     "file_name": "roleplay_chat_remove.json"
