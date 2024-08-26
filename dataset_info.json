@@ -1,12 +1,5 @@
 {
-  "Data_set_08_24": {
-    "file_name": "Data_set_08_24.json"
-    "columns": {
-      "prompt": "instruction",
-      "query": "input",
-      "response": "output",
-      "system": "system",
-      "history": "history"
-    }
+  "alpaca_zh_demo": {
+    "file_name": "alpaca_zh_demo.json"
   }
 }
