@@ -3,7 +3,7 @@ import torch
 
 # 切换为你下载的模型文件目录, 这里的demo是Llama-3-8B-Instruct
 # 如果是其他模型，比如qwen，chatglm，请使用其对应的官方demo
-model_id = "/root/lqs/LLaMA-Factory-main/llama3_models/merged_models"
+model_id = "/root/lqs/LLaMA-Factory-main/llama3_models/models/Meta-Llama-3-8B-Instruct"
 
 pipeline = transformers.pipeline(
     "text-generation",
