@@ -10,7 +10,7 @@ finetuning_type: lora
 lora_target: all
 
 ### dataset
-dataset: identity,alpaca_en_demo,adgen_local
+dataset: adgen_local
 template: llama3
 cutoff_len: 2048
 max_samples: 1000
