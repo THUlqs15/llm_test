@@ -1,10 +1,4 @@
 { 
-  "identity": {
-    "file_name": "identity.json"
-  },
-  "alpaca_en_demo": {
-    "file_name": "alpaca_en_demo.json"
-  },
   "adgen_local": {
     "file_name": "Data_set_08_24.json",
     "columns": {
