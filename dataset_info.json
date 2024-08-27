@@ -1,6 +1,6 @@
 {
-  "Data_set_08_24": {
-    "file_name": "Data_set_08_24.json",
+  "identity": {
+    "file_name": "identity.json",
     "columns": {
       "prompt": "instruction",
       "query": "input",
