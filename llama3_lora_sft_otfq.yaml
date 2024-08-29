@@ -18,7 +18,7 @@ overwrite_cache: true
 preprocessing_num_workers: 1
 
 ### output
-output_dir: /root/lqs/LLaMA-Factory-main/llama3_models/saves2_large
+output_dir: /root/lqs/LLaMA-Factory-main/llama3_models/saves2_B
 logging_steps: 10
 save_steps: 500
 plot_loss: true
