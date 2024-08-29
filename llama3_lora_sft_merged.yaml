@@ -2,7 +2,7 @@
 
 ### model
 model_name_or_path: /root/lqs/LLaMA-Factory-main/llama3_models/models/Meta-Llama-3-8B-Instruct
-adapter_name_or_path: /root/lqs/LLaMA-Factory-main/llama3_models/saves_final
+adapter_name_or_path: /root/lqs/LLaMA-Factory-main/llama3_models/saves2_B
 template: llama3
 finetuning_type: lora
 
