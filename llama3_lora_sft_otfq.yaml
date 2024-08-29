@@ -3,6 +3,9 @@ model_name_or_path: /root/lqs/LLaMA-Factory-main/llama3_models/models/Meta-Llama
 quantization_bit: 4
 quantization_method: bitsandbytes  # choices: [bitsandbytes (4/8), hqq (2/3/4/5/6/8), eetq (8)]
 
+### deepspeed
+deepspeed: /root/lqs/LLaMA-Factory-main/examples/deepspeed/ds_z3_config.json
+
 ### method
 stage: sft
 do_train: true
