@@ -1,6 +1,6 @@
 { 
   "adgen_local": {
-    "file_name": "2B.json",
+    "file_name": "Data_set_08_24.json",
     "columns": {
       "prompt": "instruction",
       "query": "input",
