@@ -1,28 +1,22 @@
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
-from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
-
-# 定义请求体的模型
-class TextGenerationRequest(BaseModel):
-    prompt: str
-    max_length: int = 100
-    temperature: float = 1.0
-
-# 初始化 FastAPI 应用
-app = FastAPI()
+from transformers import AutoModelForCausalLM, AutoTokenizer
 
 # 加载模型和分词器
 model_path = "/root/lqs/LLaMA-Factory-main/llama3_models/models/Meta-Llama-3-8B-Instruct"
 tokenizer = AutoTokenizer.from_pretrained(model_path)
-model = AutoModelForCausalLM.from_pretrained(model_path)
 
-# 定义生成文本的 API
+# 指定设备
+device = torch.device("cuda:2" if torch.cuda.is_available() else "cpu")
+
+model = AutoModelForCausalLM.from_pretrained(model_path)
+model.to(device)  # 将模型移动到指定设备
+
+# 在推理时使用指定设备
 @app.post("/generate/")
 async def generate_text(request: TextGenerationRequest):
     try:
-        # 编码输入文本
-        input_ids = tokenizer.encode(request.prompt, return_tensors="pt")
+        # 编码输入文本并放到指定设备
+        input_ids = tokenizer.encode(request.prompt, return_tensors="pt").to(device)
 
         # 使用模型生成文本
         with torch.no_grad():
@@ -39,8 +33,3 @@ async def generate_text(request: TextGenerationRequest):
         return {"generated_text": generated_text}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-
-# 启动应用的命令行代码放在这里（可选）
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
