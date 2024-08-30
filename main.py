@@ -10,6 +10,7 @@ device = torch.device("cuda:2" if torch.cuda.is_available() else "cpu")
 
 model = AutoModelForCausalLM.from_pretrained(model_path)
 model.to(device)  # 将模型移动到指定设备
+print("cao")
 
 # 在推理时使用指定设备
 @app.post("/generate/")
