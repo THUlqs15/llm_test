@@ -18,7 +18,7 @@ app = FastAPI()
 model_path = "/root/lqs/LLaMA-Factory-main/llama3_models/models/Meta-Llama-3-8B-Instruct"
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 print("cao1")
-model = AutoModelForCausalLM.from_pretrained(model_path).to('cuda' if torch.cuda.is_available() else 'cpu')
+model = AutoModelForCausalLM.from_pretrained(model_path)
 print("cao2")
 # 定义生成文本的 API
 @app.post("/generate/")
