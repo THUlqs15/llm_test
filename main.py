@@ -4,13 +4,14 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 # 加载模型和分词器
 model_path = "/root/lqs/LLaMA-Factory-main/llama3_models/models/Meta-Llama-3-8B-Instruct"
 tokenizer = AutoTokenizer.from_pretrained(model_path)
-
+print("cao1")
 # 指定设备
 device = torch.device("cuda:2" if torch.cuda.is_available() else "cpu")
 
 model = AutoModelForCausalLM.from_pretrained(model_path)
+print("cao2")
 model.to(device)  # 将模型移动到指定设备
-print("cao")
+print("cao3")
 
 # 在推理时使用指定设备
 @app.post("/generate/")
