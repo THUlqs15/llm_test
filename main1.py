@@ -15,8 +15,9 @@ app = FastAPI()
 # 加载模型和分词器
 model_path = "/root/lqs/LLaMA-Factory-main/llama3_models/models/Meta-Llama-3-8B-Instruct"
 tokenizer = AutoTokenizer.from_pretrained(model_path)
+print("cao1")
 model = AutoModelForCausalLM.from_pretrained(model_path).to('cuda' if torch.cuda.is_available() else 'cpu')
-
+print("cao2")
 # 定义生成文本的 API
 @app.post("/generate/")
 async def generate_text(request: TextGenerationRequest):
