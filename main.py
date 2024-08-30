@@ -10,6 +10,7 @@ app = FastAPI()
 model_name = "/root/lqs/LLaMA-Factory-main/llama3_models/models/Meta-Llama-3-8B-Instruct"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name)
+logger.info("Model loaded successfully.")
 
 # 定义请求数据模型
 class TextGenerationRequest(BaseModel):
