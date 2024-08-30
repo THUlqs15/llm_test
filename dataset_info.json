@@ -1,6 +1,6 @@
 { 
   "adgen_local": {
-    "file_name": "Base_2B.json",
+    "file_name": "2B.json",
     "columns": {
       "prompt": "instruction",
       "query": "input",
