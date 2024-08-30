@@ -1,0 +1,4 @@
+model_name_or_path: /root/lqs/LLaMA-Factory-main/llama3_models/merged_models
+template: llama3
+infer_backend: vllm
+vllm_enforce_eager: true
