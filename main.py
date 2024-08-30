@@ -6,7 +6,7 @@ model_path = "/root/lqs/LLaMA-Factory-main/llama3_models/models/Meta-Llama-3-8B-
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 print("cao1")
 # 指定设备
-device = torch.device("cuda:2" if torch.cuda.is_available() else "cpu")
+device = torch.device("cuda:3" if torch.cuda.is_available() else "cpu")
 
 model = AutoModelForCausalLM.from_pretrained(model_path)
 print("cao2")
