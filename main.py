@@ -1,30 +1,17 @@
-from fastapi import FastAPI
-from pydantic import BaseModel
-from transformers import AutoTokenizer, AutoModelForCausalLM
-import torch
 
-# 初始化FastAPI应用
+
+from typing import Union
+
+from fastapi import FastAPI
+
 app = FastAPI()
 
-# 加载模型和tokenizer
-model_name = "/root/lqs/LLaMA-Factory-main/llama3_models/models/Meta-Llama-3-8B-Instruct"
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-model = AutoModelForCausalLM.from_pretrained(model_name)
-logger.info("Model loaded successfully.")
 
-# 定义请求数据模型
-class TextGenerationRequest(BaseModel):
-    prompt: str
-    max_length: int = 50
+@app.get("/")
+def read_root():
+    return {"Hello": "World"}
 
-# 定义API路由和端点
-@app.post("/generate/")
-async def generate_text(request: TextGenerationRequest):
-    input_ids = tokenizer.encode(request.prompt, return_tensors='pt')
-    
-    with torch.no_grad():
-        output = model.generate(input_ids, max_length=request.max_length)
-    
-    generated_text = tokenizer.decode(output[0], skip_special_tokens=True)
-    
-    return {"generated_text": generated_text}
+
+@app.get("/items/{item_id}")
+def read_item(item_id: int, q: Union[str, None] = None):
+    return {"item_id": item_id, "q": q}
