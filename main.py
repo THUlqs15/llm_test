@@ -7,7 +7,7 @@ import torch
 app = FastAPI()
 
 # 加载模型和tokenizer
-model_name = "/home/butter/LLaMA-Factory/Meta-Llama-3-8B-Instruct"
+model_name = "/root/lqs/LLaMA-Factory-main/llama3_models/models/Meta-Llama-3-8B-Instruct"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name)
 
