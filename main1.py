@@ -10,6 +10,7 @@ class TextGenerationRequest(BaseModel):
     temperature: float = 1.0
 
 # 初始化 FastAPI 应用
+print("cao0")
 app = FastAPI()
 
 # 加载模型和分词器
