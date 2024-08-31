@@ -1,0 +1,4 @@
+model_name_or_path: /root/lqs/LLaMA-Factory-main/llama3_models/merged_models
+adapter_name_or_path: /root/lqs/LLaMA-Factory-main/llama3_models/saves_2_2B
+template: llama3
+finetuning_type: lora
