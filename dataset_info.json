@@ -7,5 +7,15 @@
       "response": "output",
       "history": "history"
     }
+  },
+  "adgen_local1": {
+    "file_name": "2B.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "history": "history"
+    }
   }
 }
+
