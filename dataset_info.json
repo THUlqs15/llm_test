@@ -16,6 +16,15 @@
       "response": "output",
       "history": "history"
     }
+  },
+  "adgen_local2": {
+    "file_name": "Butter_roleplay.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "history": "history"
+    }
   }
 }
 
