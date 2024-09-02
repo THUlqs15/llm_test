@@ -1,0 +1,4 @@
+model_name_or_path: /root/lqs/LLaMA-Factory-main/llama3_models/saves_100_Base_2B_emerge
+adapter_name_or_path: /root/lqs/LLaMA-Factory-main/llama3_models/9_3_base_2B
+template: llama3
+finetuning_type: lora
