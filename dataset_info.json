@@ -34,6 +34,15 @@
       "response": "output",
       "history": "history"
     }
+  },
+  "adgen_local4": {
+    "file_name": "55.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "history": "history"
+    }
   }
 }
 
