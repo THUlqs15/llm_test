@@ -1,6 +1,6 @@
 import torch
 from transformers import BitsAndBytesConfig
-model_name = "/root/lqs/LLaMA-Factory-main/llama3_models/models/Meta-Llama-3-8B-Instruct"
+model_name = "/root/lqs/LLaMA-Factory-main/llama3_models/9_5_yellow"
 raw_model_name = "/root/lqs/LLaMA-Factory-main/llama3_models/models/Meta-Llama-3-8B-Instruct"
 device_map = "auto"
 bnb_config = BitsAndBytesConfig(
@@ -50,7 +50,7 @@ instruction2 = "Please reply in only three sentences."
 # 合并 instructions
 combined_instructions = f"{instruction1} {instruction2}"
 
-pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=2048)
+pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=4096)
 
 for round_num, prompt in enumerate(rounds_of_conversation):
     # 将 combined_instructions 和 prompt 结合，形成新的 prompt
