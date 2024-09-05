@@ -36,8 +36,6 @@ conversation_history = ""
 # 定义测试的对话轮次
 rounds_of_conversation = [
     "I took my entire cock inside you.",
-    "Describe the sense in five sentences.",
-    "I ejaculate towards your mouth.",
 ]
 
 
