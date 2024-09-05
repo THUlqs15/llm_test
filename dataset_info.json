@@ -25,6 +25,15 @@
       "response": "output",
       "history": "history"
     }
+  },
+  "adgen_local3": {
+    "file_name": "yellow.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "history": "history"
+    }
   }
 }
 
