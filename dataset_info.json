@@ -43,6 +43,24 @@
       "response": "output",
       "history": "history"
     }
+  },
+  "adgen_local5": {
+    "file_name": "Margaret.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "history": "history"
+    }
+  },
+  "adgen_local6": {
+    "file_name": "2B_Margaret.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "history": "history"
+    }
   }
 }
 
