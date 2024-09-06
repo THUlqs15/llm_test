@@ -144,13 +144,13 @@ def run_chat() -> None:
             print("History has been removed.")
             continue
         instructions = input("\nInstruction: ")
-        query = query + " " + instructions
+        # query = query + " " + instructions
         messages.append({"role": "user", "content": query})
         # messages.append({"role": "system", "content": instructions})
         print("Assistant: ", end="", flush=True)
 
         response = ""
-        for new_text in chat_model.stream_chat(messages):
+        for new_text in chat_model.stream_chat(messages,instructions):
             print(new_text, end="", flush=True)
             response += new_text
         print()
