@@ -150,8 +150,8 @@ def run_chat() -> None:
             continue
 
         instructions = input("\nInstruction: ")
-        query = query + instructions
         messages.append({"role": "user", "content": query})
+        messages.append({"role": "system", "content": instructions})
         print("Assistant: ", end="", flush=True)
 
         response = ""
