@@ -149,9 +149,7 @@ def run_chat() -> None:
             print("History has been removed.")
             continue
 
-        # instructions = input("\nInstruction: ")
         messages.append({"role": "user", "content": query})
-        # messages.append({"role": "system", "content": instructions})
         print("Assistant: ", end="", flush=True)
 
         response = ""
