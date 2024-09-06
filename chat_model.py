@@ -134,8 +134,6 @@ def run_chat() -> None:
     while True:
         try:
             query = input("\nUser: ")
-            instructions = input("\nInstruction: ")
-            query = query + instructions
         except UnicodeDecodeError:
             print("Detected decoding error at the inputs, please set the terminal encoding to utf-8.")
             continue
@@ -151,6 +149,8 @@ def run_chat() -> None:
             print("History has been removed.")
             continue
 
+        instructions = input("\nInstruction: ")
+        query = query + instructions
         messages.append({"role": "user", "content": query})
         print("Assistant: ", end="", flush=True)
 
