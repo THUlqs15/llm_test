@@ -36,11 +36,12 @@ conversation_history = ""
 # 定义测试的对话轮次
 rounds_of_conversation = [
     "I took my entire cock inside you.",
+    "Describe the sense in five sentences.",
 ]
 
 
 # 定义多个 instructions
-instruction1 = "You are a succubus who sucks dick and drinks sperm for a living."
+instruction1 = ""
 instruction2 = "Please reply in only three sentences."
 
 # 合并 instructions
