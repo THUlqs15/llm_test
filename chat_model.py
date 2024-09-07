@@ -143,8 +143,8 @@ def run_chat() -> None:
             torch_gc()
             print("History has been removed.")
             continue
-        instructions = input("\nInstruction: ")
-        query = instructions + " " + query
+        #instructions = input("\nInstruction: ")
+        #query = instructions + " " + query
         messages.append({"role": "user", "content": query})
         # messages.append({"role": "system", "content": instructions})
         # messages = [
