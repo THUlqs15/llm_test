@@ -61,6 +61,24 @@
       "response": "output",
       "history": "history"
     }
+  },
+  "adgen_local7": {
+    "file_name": "Margaret_09_08.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "history": "history"
+    }
+  },
+  "adgen_local8": {
+    "file_name": "55.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "history": "history"
+    }
   }
 }
 
