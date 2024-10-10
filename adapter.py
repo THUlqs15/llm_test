@@ -40,8 +40,8 @@ def run_inference(model, tokenizer, history, max_new_tokens=50):
     return generated_text
 
 def main():
-    model_name_or_path: /root/lqs/LLaMA-Factory-main/llama3_models/models/Meta-Llama-3-8B-Instruct
-    adapter_name_or_path: /root/lqs/LLaMA-Factory-main/llama3_models/9_11
+    model_name_or_path: "/root/lqs/LLaMA-Factory-main/llama3_models/models/Meta-Llama-3-8B-Instruct"
+    adapter_name_or_path: "/root/lqs/LLaMA-Factory-main/llama3_models/9_11"
     
     # 加载模型和分词器
     tokenizer, model = load_model(model_name_or_path, adapter_name_or_path)
