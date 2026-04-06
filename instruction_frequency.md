@@ -8,8 +8,8 @@ Profile the vLLM serving engine to collect batch execution time data, then fit a
 
 ## Environment
 
-- **vLLM source code**: `/workspace/lqs3/LLM_scheduling/vllm` (you may modify any code here for profiling purposes)
-- **LLM model path**: `/workspace/LLM/Butter_L3_8B_RPMaster_v2`
+- **vLLM source code**: `/home/ubuntu/lqs/vllm` (you may modify any code here for profiling purposes)
+- **LLM model path**: `/home/ubuntu/lqs/L3`
 - **Conda environment**: activate with `conda activate myvllm` before any vLLM-related command
 - **Output directory for result.md and profiling.md**: current working directory (where you are invoked)
 
